@@ -1,0 +1,17 @@
+{
+    "name": "Mh.Unity.Utility.Tests",
+    "references": [
+        "Mh.Unity.Utility"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

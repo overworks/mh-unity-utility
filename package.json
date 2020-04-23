@@ -1,8 +1,8 @@
 {
   "name": "com.mh.unity.utility",
   "version": "0.0.1",
-  "displayName": "mh-unity-utility",
-  "description": "Utilities for Unity",
+  "displayName": "MH Utilities for Unity",
+  "description": "Simple utilities for Unity",
   "author": {
       "name": "Park Minhyung",
       "email": "urlinee@gmail.com"
