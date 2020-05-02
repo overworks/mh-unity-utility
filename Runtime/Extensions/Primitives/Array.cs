@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Mh
 {
-    public static class CollectionExtensions
+    public static partial class PrimitiveExtensions
     {
-#region Array
         public static bool IsNullOrEmpty<T>(this T[] array)
         {
             return array == null || array.Length == 0;
@@ -24,6 +23,41 @@ namespace Mh
         public static int BinarySearch<T>(this T[] array, int index, int length, T value, IComparer<T> comparer)
         {
             return Array.BinarySearch(array, index, length, value, comparer);
+        }
+
+        public static void ClearAll(this Array array)
+        {
+            Clear(array, 0, array.Length);
+        }
+
+        public static void Clear(this Array array, int index, int length)
+        {
+            Array.Clear(array, index, length);
+        }
+
+        public static void ConstrainedCopy(this Array sourceArray, int sourceIndex, Array destinationArray, int destinationIndex, int length)
+        {
+            Array.ConstrainedCopy(sourceArray, sourceIndex, destinationArray, destinationIndex, length);
+        }
+
+        public static void Copy(this Array sourceArray, Array destinationArray, int length)
+        {
+            Array.Copy(sourceArray, destinationArray, length);
+        }
+
+        public static void Copy(this Array sourceArray, Array destinationArray, long length)
+        {
+            Array.Copy(sourceArray, destinationArray, length);
+        }
+
+        public static void Copy(this Array sourceArray, int sourceIndex, Array destinationArray, int destinationIndex, int length)
+        {
+            Array.Copy(sourceArray, sourceIndex, destinationArray, destinationIndex, length);
+        }
+
+        public static void Copy(this Array sourceArray, long sourceIndex, Array destinationArray, long destinationIndex, long length)
+        {
+            Array.Copy(sourceArray, sourceIndex, destinationArray, destinationIndex, length);
         }
 
         public static bool Exists<T>(this T[] array, Predicate<T> match)
@@ -111,6 +145,16 @@ namespace Mh
             return Array.LastIndexOf(array, value, startIndex, count);
         }
 
+        public static void Reverse(this Array array)
+        {
+            Array.Reverse(array);
+        }
+
+        public static void Reverse(this Array array, int index, int length)
+        {
+            Array.Reverse(array, index, length);
+        }
+
         public static void Sort<T>(this T[] array)
         {
             Array.Sort(array);
@@ -140,13 +184,5 @@ namespace Mh
         {
             return Array.TrueForAll(array, match);
         }
-#endregion
-
-#region List
-        public static bool IsNullOrEmpty<T>(this List<T> list)
-        {
-            return list == null || list.Count == 0;
-        }
-#endregion
     }
 }
